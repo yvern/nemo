@@ -16,3 +16,12 @@ requires "nimpy"
 
 task bl, "builds sharedlib":
     exec "nimble build --app:lib -d:release --gc:regions"
+
+before bl:
+    exec "nimble check"
+
+task tst, "simple test":
+    exec "python3 nemo.py"
+
+before test:
+    exec "nimble bl"
