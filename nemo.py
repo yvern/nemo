@@ -14,4 +14,4 @@ with open("index.html", "r") as html:
   assert duration[1][0]["text"].strip() == "100 min"
   assert len(bad_rating[1]) == 13
   assert rating[1][0]["text"] == "8.1/10"
-  print("Test passed")
+  print("Test passed!")

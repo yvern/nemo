@@ -14,14 +14,8 @@ requires "nim >= 0.19.4"
 requires "nimquery >= 1.1.2"
 requires "nimpy"
 
-task bl, "builds sharedlib":
-    exec "nimble build --app:lib -d:release --gc:regions"
+task bld, "builds sharedlib":
+    exec "nimble build --app:lib -d:release --gc:regions -y"
 
-before bl:
-    exec "nimble check"
-
-task tst, "simple test":
+task tst, "tests the bult sharedlib":
     exec "python3 nemo.py"
-
-before test:
-    exec "nimble bl"
