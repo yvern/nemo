@@ -33,7 +33,7 @@ Because:
 * **Build it on a docker container (for use with alpine or ubuntu containers)**:
     * Be sure to have **make** and **docker** insalled and working
     * Clone this repo
-    * Run `make build` to get the alpine version (for ubuntu, set LINUX = UBUNTU)
+    * Run `make build` to get the alpine version (for ubuntu, set LINUX = ubuntu)
     * Run `make test` to test it with the bundled python script on the same container used to build
     * There you have your `nemo.so` file to put into your desired container!
 
@@ -52,7 +52,8 @@ queries = [
 ]
 
 results = dict(nemo.find(some_html, queries)) 
-# a dict mapping from the query-string to a list of the findings, where each finding is a dict with attributes and content on key 'text', like:
+# a dict mapping from the query-string to a list of the findings,
+#where each finding is a dict with attributes and content on key 'text', like:
 {
     'body span a:not(.first-item)' : [{'tag':'a', 'text':'hi', 'class':'last-item'}],
     '[href$=".pdf"]':[
