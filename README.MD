@@ -53,7 +53,7 @@ queries = [
 
 results = dict(nemo.find(some_html, queries)) 
 # a dict mapping from the query-string to a list of the findings,
-#where each finding is a dict with attributes and content on key 'text', like:
+# where each finding is a dict with attributes and content on key 'text', like:
 {
     'body span a:not(.first-item)' : [{'tag':'a', 'text':'hi', 'class':'last-item'}],
     '[href$=".pdf"]':[

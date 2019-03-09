@@ -4,7 +4,7 @@ LINUX ?= alpine
 nemo.so:
 	docker run -v `pwd`:/usr/src/app \
 		-w /usr/src/app \
-		nimlang/nim:$(LINUX) nimble bl
+		nimlang/nim:$(LINUX) nimble bld
 
 build: nemo.so
 
