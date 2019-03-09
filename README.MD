@@ -37,6 +37,10 @@ Because:
     * Run `make test` to test it with the bundled python script on the same container used to build
     * There you have your `nemo.so` file to put into your desired container!
 
+* **Prebuilt binaries (macosx, alpine and ubuntu only, for the lazy ones)**:
+    * [macosx](https://github.com/yvendruscolo/nemo/releases/tag/0.1.0-macosx)
+    * [alpine](https://github.com/yvendruscolo/nemo/releases/tag/0.1.0-alpine)
+    * [ubuntu](https://github.com/yvendruscolo/nemo/releases/tag/0.1.0-ubuntu)
 
 ### Usage:
 ```python
