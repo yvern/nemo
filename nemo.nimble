@@ -15,7 +15,10 @@ requires "nimquery >= 1.1.2"
 requires "nimpy"
 
 task bld, "builds sharedlib":
-    exec "nimble build --app:lib -d:release --gc:regions -y"
+    exec "nimble build --app:lib -d:release --opt:speed --gc:regions -y"
 
 task tst, "tests the bult sharedlib":
     exec "python3 nemo.py"
+
+task src, "generate c sources":
+    exec "nimble c -c --genscript --nimcache:./csources nemo.nim -y"

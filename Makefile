@@ -13,5 +13,11 @@ test: nemo.so
 		-w /usr/src/app \
 		nimlang/nim:$(LINUX) python nemo.py
 
+csources:
+	docker run -v `pwd`:/usr/src/app \
+		-w /usr/src/app \
+		nimlang/nim:$(LINUX) nimble src
+
 clean:
 	- rm nemo.so
+	- rm -r csources
