@@ -25,7 +25,7 @@ Because:
 * **Build it on your OS:**
     * Make sure you have [nim and nimble](https://nim-lang.org) installed and working
     * Clone this repo
-    * Run `nimble bld` to generate the sharedlib
+    * Run `nimble bld` to generate the sharedlib (or `nimble src` to generate C sources and a shellscript for compiling it later, all under `csources`)
     * Run `nimble tst` to test it with a bundled python script
     * And you are good to go!
 
@@ -33,7 +33,7 @@ Because:
 * **Build it on a docker container (for use with alpine or ubuntu containers)**:
     * Be sure to have **make** and **docker** insalled and working
     * Clone this repo
-    * Run `make build` to get the alpine version (for ubuntu, set LINUX = ubuntu)
+    * Run `make build` to get the alpine version (for ubuntu, set LINUX = ubuntu) (or `make csources` to generate C sources and a shellscript for compiling it later, all under `csources`)
     * Run `make test` to test it with the bundled python script on the same container used to build
     * There you have your `nemo.so` file to put into your desired container!
 
